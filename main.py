@@ -38,6 +38,13 @@ async def create_note(note: Note):
 	fake_notes_db.append(note.contents)	
 	return note.contents
 
-# @app.delete("/notes/{note_id}")
-# async def delete_note_by_id(note_id: int):
-# 	if is_id_in_bounds(note_id, fake_notes_db):
+@app.delete("/notes/{note_id}")
+async def delete_note_by_id(note_id: int):
+	if is_id_out_of_bounds(note_id, fake_notes_db):
+		return {"error" : "note_id out of bounds"}
+	return fake_notes_db.pop(note_id)
+
+
+
+
+
