@@ -44,6 +44,13 @@ async def delete_note_by_id(note_id: int):
 		return {"error" : "note_id out of bounds"}
 	return fake_notes_db.pop(note_id)
 
+@app.patch("/notes/{note_id}")
+async def patch_note(note_id: int, note: Note):
+	if is_id_out_of_bounds(note_id, fake_notes_db):
+		return {"error" : "note_id out of bounds"}
+	fake_notes_db[note_id] = note.contents
+	return fake_notes_db[note_id]
+
 
 
 
