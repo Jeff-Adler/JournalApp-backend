@@ -10,6 +10,7 @@ logger.debug("TESTING LOGGER")
 
 fake_notes_db = ["note_1", "note_2", "note_3"]
 
+# Note model: used to define request bodies
 class Note(BaseModel):
 	contents: str
 
