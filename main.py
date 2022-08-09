@@ -31,8 +31,8 @@ async def get_notes(skip: int = 0, limit: int = 3):
 	i = skip
 	j = skip + limit if skip + limit < len(fake_notes_db) else len(fake_notes_db) - 1
 	note_collection = ""
-	for note in fake_notes_db[i:j]:
-    	note_collection += note
+	for note in fake_notes_db[i:j:]:
+		note_collection = note_collection + " " + note
 	return {"notes": note_collection}
 
 @app.get("/notes/{note_id}")
