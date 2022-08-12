@@ -6,8 +6,14 @@ class UserBase(BaseModel):
 class UserCreate(UserBase):
 	pass
 
+class User(UserBase):
+	pass
+
 class TodoBase(BaseModel):
 	task: str
 
 class TodoCreate(TodoBase):
+	pass
+
+class Todo(TodoBase):
 	pass
