@@ -13,20 +13,20 @@ class User(UserBase):
 	id: int
 	is_active: bool
 
-	todos: List[Todo] = []
+	tasks: List[Task] = []
 
 	# This allows you to set certain config options with Pydantic
     class Config:
     	# allows you to do e.q. current_user.items as a shorthand for data.id or relationship attributes like current_user.items
     	orm_mode = True
 
-class TodoBase(BaseModel):
+class TaskBase(BaseModel):
 	task: str
 
-class TodoCreate(TodoBase):
+class TaskCreate(TaskBase):
 	pass
 
-class Todo(TodoBase):
+class Task(TaskBase):
 	id: int
 	is_done: bool
 	owner_id: int
