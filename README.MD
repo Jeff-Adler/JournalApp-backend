@@ -8,14 +8,13 @@ This is just a basic journal app to get back on the swing of web dev.
 
 Routes:
 
-- GET user
-- GET user by email
-- GET all user
-- POST user
-- GET all notes
-- GET particular note by id
-- GET a user's notes
-- POST new note
-- PATCH note: task
-- PATCH note: mark as done
-- DELETE note by id
+# - GET user
+# - GET user by email
+# - GET all user
+# - POST user
+# - GET particular task by id
+# - GET a user's tasks
+# - POST new task
+# - PATCH task: task
+# - PATCH task: mark as done
+# - DELETE task by id
