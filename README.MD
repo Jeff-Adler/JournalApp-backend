@@ -11,5 +11,6 @@ Routes:
 - GET all notes
 - GET particular note by id
 - POST new note
-- PATCH note
+- PATCH note: task
+- PATCH note: mark as done
 - DELETE note by id
