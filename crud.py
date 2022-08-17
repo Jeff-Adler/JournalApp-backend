@@ -14,11 +14,11 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
 def create_user():
 	pass
 
-def get_task():
-	pass
+def get_task(db: Session, task_id: int):
+	return db.query(models.Task).filter(models.Task.id == task_id).first()
 
-def get_tasks_by_user_id():
-	pass
+def get_tasks_by_user_id(db: Session, user_id: int):
+	# return db.query(models.User).filter(models.User.id == user_id).first()
 
 def create_task():
 	pass
